@@ -1,0 +1,70 @@
+---
+title: "FAWE (Fast Async WorldEdit)"
+description: "Pengganti world edit"
+---
+
+## 1. Download FAWE
+
+1. Kunjungi **link resmi FAWE PaperMC**:\
+   https://www.spigotmc.org/resources/fast-async-worldedit.13932/
+2. Download versi **Paper 1.21+** (pastikan kompatibel dengan PaperMC 1.21.8).
+
+> File yang diunduh biasanya berekstensi `.jar`.
+
+---
+
+## 2. Upload Plugin
+
+1. Masuk ke **File Manager** server di Pterodactyl.
+2. Masuk ke folder:
+
+```
+plugins/
+```
+
+3. Upload file `FAWE-x.x.x.jar` ke folder ini.
+
+---
+
+## 3. Start / Restart Server
+
+- Klik **Start** atau **Restart** server di panel.
+- FAWE akan otomatis membuat folder konfigurasi di `plugins/FAWE/`.
+
+---
+
+## 4. Konfigurasi Awal (Opsional)
+
+- Jika ingin menyesuaikan setting FAWE, edit file di:
+
+```
+plugins/FAWE/config.yml
+```
+
+- Beberapa setting penting:
+  - `async-chunks`: true (agar world edit lebih cepat)
+  - `queue-max-tasks`: atur sesuai RAM server
+
+---
+
+## 5. Cek Plugin Aktif
+
+- Masuk ke server via **console** atau ingame.
+- Ketik perintah:
+
+```
+/pl
+```
+
+- Pastikan `FastAsyncWorldEdit` muncul sebagai plugin aktif.
+
+---
+
+## 6. Penggunaan Dasar
+
+- Gunakan **WorldEdit commands** seperti:
+  - `//wand` → mendapatkan wand selection tool
+  - `//set <block>` → mengganti blok dalam selection
+  - `//copy`, `//paste` → untuk copy & paste area
+
+> FAWE kompatibel dengan WorldEdit commands biasa, tapi lebih cepat dan lebih aman untuk server besar.

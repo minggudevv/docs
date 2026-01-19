@@ -1,0 +1,72 @@
+---
+title: "Perkenalan"
+description: "Proteksi Lobby"
+---
+
+1. Kunjungi link Modrinth:\
+   https://modrinth.com/plugin/worldguard/versions
+2. Pilih versi **Paper 1.21+** yang kompatibel dengan FAWE & PaperMC 1.21.8.
+3. Download file `.jar`.
+
+---
+
+## 2. Upload Plugin
+
+1. Masuk ke **File Manager** di Pterodactyl.
+2. Masuk folder:
+
+```
+plugins/
+```
+
+3. Upload file `WorldGuard-x.x.x.jar` ke folder ini.
+4. Pastikan **FAWE/WorldEdit** sudah terpasang karena WorldGuard membutuhkan WorldEdit.
+
+---
+
+## 3. Start / Restart Server
+
+- Klik **Start** atau **Restart** server di panel.
+- Folder konfigurasi `plugins/WorldGuard/` akan otomatis dibuat.
+
+---
+
+## 4. Proteksi Area Dasar
+
+1. Pilih area dengan wand FAWE/WorldEdit:
+
+```
+//wand
+```
+
+2. Seleksi area yang ingin diproteksi (misal spawn/lobby).
+3. Buat region:
+
+```
+/rg define <nama_region>
+```
+
+4. Set flags untuk proteksi:
+
+```
+/rg flag <nama_region> build deny
+/rg flag <nama_region> pvp deny
+/rg flag <nama_region> chest-access deny
+```
+
+> **Contoh flags umum**:
+
+- `build` → cegah block diubah
+- `pvp` → cegah player fight
+- `chest-access` → cegah buka chest
+- `mob-spawning` → cegah mob spawn
+
+---
+
+## 5. Tips Tambahan
+
+- Gunakan **WorldGuard + FAWE** untuk editing world lebih cepat dan aman.
+- Buat region khusus untuk **lobby, spawn, dan warzone** agar server lebih terstruktur.
+- Update flags sesuai kebutuhan gameplay.
+
+---
