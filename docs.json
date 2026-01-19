@@ -9,20 +9,6 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "icon": "book-open-cover",
-          "href": "https://mintlify.com/docs"
-        },
-        {
-          "anchor": "Blog",
-          "icon": "newspaper",
-          "href": "https://mintlify.com/blog"
-        }
-      ]
-    },
     "tabs": [
       {
         "tab": "Guides",
@@ -37,7 +23,14 @@
           {
             "group": "Plugin",
             "pages": [
-              "guides/plugin/editor-world"
+              "guides/plugin/editor-world",
+              {
+                "group": "WorldGuard",
+                "pages": [
+                  "guides/plugin/untitled-page",
+                  "guides/plugin/world-guard/proteksi-lobby"
+                ]
+              }
             ]
           }
         ]

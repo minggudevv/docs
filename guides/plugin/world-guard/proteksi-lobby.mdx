@@ -1,0 +1,62 @@
+---
+title: "Proteksi Lobby dengan WorldGuard (__global__)"
+description: "Proteksi Lobby (LOBBY)"
+---
+
+## 1. Definisikan Region Global
+
+1. Masuk ke server (ingame atau console).
+2. Buat region global dengan perintah:
+
+```
+/rg define __global__
+```
+
+> Region `__global__` akan berlaku ke seluruh world default.
+
+---
+
+## 2. Set Flag Proteksi Dasar
+
+Gunakan command berikut untuk melindungi lobby dari interaksi player:
+
+```
+/rg flag __global__ build deny          # cegah player memecah atau menempatkan blok
+/rg flag __global__ interact deny       # cegah interaksi dengan blok (misal tombol, lever, chest)
+/rg flag __global__ chest-access deny   # cegah membuka chest atau container
+/rg flag __global__ item-drop deny      # cegah player menjatuhkan item
+/rg flag __global__ item-pickup deny    # cegah player mengambil item dari ground
+/rg flag __global__ pvp deny            # cegah player menyerang player lain
+/rg flag __global__ mob-spawning deny   # cegah mob spawn
+```
+
+> Catatan: Kalau server punya beberapa world, kamu bisa buat flag serupa di masing-masing world.
+
+---
+
+## 3. Proteksi Tambahan (Opsional)
+
+- `entry-deny <role>` → cegah role tertentu masuk area
+- `greeting <text>` → tampilkan pesan saat masuk lobby
+- `farewell <text>` → tampilkan pesan saat keluar lobby
+
+Contoh:
+
+```
+/rg flag __global__ greeting "&aSelamat datang di Lobby Cosaxid!"
+/rg flag __global__ farewell "&cTerima kasih sudah bermain!"
+```
+
+---
+
+## 4. Cek Proteksi
+
+- Untuk melihat flag region:
+
+```
+/rg info __global__
+```
+
+- Pastikan semua flag sudah sesuai.
+
+---
